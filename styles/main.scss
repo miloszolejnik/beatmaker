@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+$pad: #1f2229;
+$shadow: 0px 5px 10px rgba(0, 0, 0, 0.7);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
+    i, svg{
+        pointer-events: none;
+    }
+    font-family: 'Fira Sans', sans-serif;
+    .app{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color:ghostwhite;
+        .sequancer{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100vw;
+            h1{
+                text-transform: uppercase;
+                text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+                letter-spacing: 2px;
+            }
+            .kick-track, .snare-track, .hihat-track, .perc-track, .tom-track{
+                display: flex;
+                width: 100vw;
+                padding: 0 10rem;
+                .controls{
+                    width: 100%;
+                    display: grid;
+                    grid-template-columns: 30% 30% 30%;
+                    grid-gap: 3%;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin: 0rem 2rem;
+                    .mute{
+                        padding: 1rem;
+                        border: none;
+                        background-color: rgb(102, 158, 91);
+                        color: white;
+                        font-size: 1rem;
+                        cursor: pointer;
+                        transition: all 0.5s ease;
+                        box-shadow: $shadow;
+                    }
+                    .mute.active{
+                        background-color: rgb(170, 88, 88);
+                    }
+                    select{
+                        padding: 1rem;
+                        font-size: 1rem;
+                        text-align: center;
+                        box-shadow: $shadow;
+                    }
+                }
+                .kick, .snare, .hihat, .perc, .tom{
+                    display: flex;
+                    .kick-pad, .snare-pad, .hihat-pad, .perc-pad, .tom-pad{
+                        width: 5rem;
+                        height: 5rem;
+                        margin: 1rem .5rem;
+                        cursor: pointer;
+                    }
+                }
+                .kick-pad{
+                    background-color: $pad;
+                }
+                .kick-pad.active{
+                    background-color: #2a2a53ee;
+                }
+                .snare-pad{
+                    background-color: $pad;
+                }
+                .snare-pad.active{
+                    background-color: #202060ee;
+                }
+                .hihat-pad{
+                    background-color: $pad;
+                }
+                .hihat-pad.active{
+                    background-color: #602080ee;
+                }
+                .perc-pad{
+                    background-color: $pad;
+                }
+                .perc-pad.active{
+                    background-color: #B030B0ee;
+                }
+                .tom-pad{
+                    background-color: $pad;
+                }
+                .tom-pad.active{
+                    background-color: #d051d0ee;
+                }
+                .pad{
+                    transition: all 0.5s ease-in-out;
+                    box-shadow: $shadow;
+                } 
+            }
+            .play{
+                border: none;
+                background-color: rgb(102, 158, 91);
+                padding: 1rem 4rem;
+                font-size: 1.5rem;
+                margin-top: 3rem;
+                color: black;
+                cursor: pointer;
+                box-shadow: $shadow;
+                font-weight: bold;
+                text-transform: 0px 5px 10px rgba(0, 0, 0, 0.7);
+                letter-spacing: 2px;
+            }
+            .tempo{
+                margin: 3rem;
+                width: 30%;
+                .tempo-slider{
+                    padding: .2rem;
+                    -webkit-appearance: none;
+                    margin: 1rem 0rem;
+                    width: 100%;
+                    position: relative;
+                    background-color: rgb(102, 158, 91);
+                    cursor: pointer;
+                    border-radius: 1rem;
+                    box-shadow: $shadow;
+                }
+                p{
+                    font-size: 1.5rem;
+                    margin: .5rem;
+                    text-align: center;
+                    text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.7);
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                }
+            }
+        }
+    }
+    .mobile-warning{
+        height: 100vw;
+        width: 100vw;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: seagreen;
+        z-index: 99;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        visibility: hidden;
+        .h2{
+            align-self: center;
+            justify-self: center;
+        }
+    }
+}
+
+@keyframes playTrack{
+    from{
+        transform: scale(1);
+    }to{
+        transform: scale(1.2);
+    }
+}
+
+@media only screen and (max-width: 1600px){
+    .app{
+        height: auto;
+        .sequancer{
+            .kick-track, .snare-track, .hihat-track, .perc-track, .tom-track{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100vw;
+                padding: 0px;
+                .controls{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-evenly;
+                }
+                .kick, .snare, .hihat, .perc, .tom{
+                    display: block;
+                    width: 100%;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 700px){
+    body{
+        .app{
+            display: none;
+        }
+        .mobile-warning{
+            visibility: visible;
+            height: 100vh;
+        }
+    }
+}

@@ -1,0 +1,305 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+body i, body svg {
+  pointer-events: none;
+}
+
+body .app {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: ghostwhite;
+}
+
+body .app .sequancer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+}
+
+body .app .sequancer h1 {
+  text-transform: uppercase;
+  text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+  letter-spacing: 2px;
+}
+
+body .app .sequancer .kick-track, body .app .sequancer .snare-track, body .app .sequancer .hihat-track, body .app .sequancer .perc-track, body .app .sequancer .tom-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  padding: 0 10rem;
+}
+
+body .app .sequancer .kick-track .controls, body .app .sequancer .snare-track .controls, body .app .sequancer .hihat-track .controls, body .app .sequancer .perc-track .controls, body .app .sequancer .tom-track .controls {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30% 30% 30%;
+      grid-template-columns: 30% 30% 30%;
+  grid-gap: 3%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0rem 2rem;
+}
+
+body .app .sequancer .kick-track .controls .mute, body .app .sequancer .snare-track .controls .mute, body .app .sequancer .hihat-track .controls .mute, body .app .sequancer .perc-track .controls .mute, body .app .sequancer .tom-track .controls .mute {
+  padding: 1rem;
+  border: none;
+  background-color: #669e5b;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.7);
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.7);
+}
+
+body .app .sequancer .kick-track .controls .mute.active, body .app .sequancer .snare-track .controls .mute.active, body .app .sequancer .hihat-track .controls .mute.active, body .app .sequancer .perc-track .controls .mute.active, body .app .sequancer .tom-track .controls .mute.active {
+  background-color: #aa5858;
+}
+
+body .app .sequancer .kick-track .controls select, body .app .sequancer .snare-track .controls select, body .app .sequancer .hihat-track .controls select, body .app .sequancer .perc-track .controls select, body .app .sequancer .tom-track .controls select {
+  padding: 1rem;
+  font-size: 1rem;
+  text-align: center;
+  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.7);
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.7);
+}
+
+body .app .sequancer .kick-track .kick, body .app .sequancer .kick-track .snare, body .app .sequancer .kick-track .hihat, body .app .sequancer .kick-track .perc, body .app .sequancer .kick-track .tom, body .app .sequancer .snare-track .kick, body .app .sequancer .snare-track .snare, body .app .sequancer .snare-track .hihat, body .app .sequancer .snare-track .perc, body .app .sequancer .snare-track .tom, body .app .sequancer .hihat-track .kick, body .app .sequancer .hihat-track .snare, body .app .sequancer .hihat-track .hihat, body .app .sequancer .hihat-track .perc, body .app .sequancer .hihat-track .tom, body .app .sequancer .perc-track .kick, body .app .sequancer .perc-track .snare, body .app .sequancer .perc-track .hihat, body .app .sequancer .perc-track .perc, body .app .sequancer .perc-track .tom, body .app .sequancer .tom-track .kick, body .app .sequancer .tom-track .snare, body .app .sequancer .tom-track .hihat, body .app .sequancer .tom-track .perc, body .app .sequancer .tom-track .tom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .app .sequancer .kick-track .kick .kick-pad, body .app .sequancer .kick-track .kick .snare-pad, body .app .sequancer .kick-track .kick .hihat-pad, body .app .sequancer .kick-track .kick .perc-pad, body .app .sequancer .kick-track .kick .tom-pad, body .app .sequancer .kick-track .snare .kick-pad, body .app .sequancer .kick-track .snare .snare-pad, body .app .sequancer .kick-track .snare .hihat-pad, body .app .sequancer .kick-track .snare .perc-pad, body .app .sequancer .kick-track .snare .tom-pad, body .app .sequancer .kick-track .hihat .kick-pad, body .app .sequancer .kick-track .hihat .snare-pad, body .app .sequancer .kick-track .hihat .hihat-pad, body .app .sequancer .kick-track .hihat .perc-pad, body .app .sequancer .kick-track .hihat .tom-pad, body .app .sequancer .kick-track .perc .kick-pad, body .app .sequancer .kick-track .perc .snare-pad, body .app .sequancer .kick-track .perc .hihat-pad, body .app .sequancer .kick-track .perc .perc-pad, body .app .sequancer .kick-track .perc .tom-pad, body .app .sequancer .kick-track .tom .kick-pad, body .app .sequancer .kick-track .tom .snare-pad, body .app .sequancer .kick-track .tom .hihat-pad, body .app .sequancer .kick-track .tom .perc-pad, body .app .sequancer .kick-track .tom .tom-pad, body .app .sequancer .snare-track .kick .kick-pad, body .app .sequancer .snare-track .kick .snare-pad, body .app .sequancer .snare-track .kick .hihat-pad, body .app .sequancer .snare-track .kick .perc-pad, body .app .sequancer .snare-track .kick .tom-pad, body .app .sequancer .snare-track .snare .kick-pad, body .app .sequancer .snare-track .snare .snare-pad, body .app .sequancer .snare-track .snare .hihat-pad, body .app .sequancer .snare-track .snare .perc-pad, body .app .sequancer .snare-track .snare .tom-pad, body .app .sequancer .snare-track .hihat .kick-pad, body .app .sequancer .snare-track .hihat .snare-pad, body .app .sequancer .snare-track .hihat .hihat-pad, body .app .sequancer .snare-track .hihat .perc-pad, body .app .sequancer .snare-track .hihat .tom-pad, body .app .sequancer .snare-track .perc .kick-pad, body .app .sequancer .snare-track .perc .snare-pad, body .app .sequancer .snare-track .perc .hihat-pad, body .app .sequancer .snare-track .perc .perc-pad, body .app .sequancer .snare-track .perc .tom-pad, body .app .sequancer .snare-track .tom .kick-pad, body .app .sequancer .snare-track .tom .snare-pad, body .app .sequancer .snare-track .tom .hihat-pad, body .app .sequancer .snare-track .tom .perc-pad, body .app .sequancer .snare-track .tom .tom-pad, body .app .sequancer .hihat-track .kick .kick-pad, body .app .sequancer .hihat-track .kick .snare-pad, body .app .sequancer .hihat-track .kick .hihat-pad, body .app .sequancer .hihat-track .kick .perc-pad, body .app .sequancer .hihat-track .kick .tom-pad, body .app .sequancer .hihat-track .snare .kick-pad, body .app .sequancer .hihat-track .snare .snare-pad, body .app .sequancer .hihat-track .snare .hihat-pad, body .app .sequancer .hihat-track .snare .perc-pad, body .app .sequancer .hihat-track .snare .tom-pad, body .app .sequancer .hihat-track .hihat .kick-pad, body .app .sequancer .hihat-track .hihat .snare-pad, body .app .sequancer .hihat-track .hihat .hihat-pad, body .app .sequancer .hihat-track .hihat .perc-pad, body .app .sequancer .hihat-track .hihat .tom-pad, body .app .sequancer .hihat-track .perc .kick-pad, body .app .sequancer .hihat-track .perc .snare-pad, body .app .sequancer .hihat-track .perc .hihat-pad, body .app .sequancer .hihat-track .perc .perc-pad, body .app .sequancer .hihat-track .perc .tom-pad, body .app .sequancer .hihat-track .tom .kick-pad, body .app .sequancer .hihat-track .tom .snare-pad, body .app .sequancer .hihat-track .tom .hihat-pad, body .app .sequancer .hihat-track .tom .perc-pad, body .app .sequancer .hihat-track .tom .tom-pad, body .app .sequancer .perc-track .kick .kick-pad, body .app .sequancer .perc-track .kick .snare-pad, body .app .sequancer .perc-track .kick .hihat-pad, body .app .sequancer .perc-track .kick .perc-pad, body .app .sequancer .perc-track .kick .tom-pad, body .app .sequancer .perc-track .snare .kick-pad, body .app .sequancer .perc-track .snare .snare-pad, body .app .sequancer .perc-track .snare .hihat-pad, body .app .sequancer .perc-track .snare .perc-pad, body .app .sequancer .perc-track .snare .tom-pad, body .app .sequancer .perc-track .hihat .kick-pad, body .app .sequancer .perc-track .hihat .snare-pad, body .app .sequancer .perc-track .hihat .hihat-pad, body .app .sequancer .perc-track .hihat .perc-pad, body .app .sequancer .perc-track .hihat .tom-pad, body .app .sequancer .perc-track .perc .kick-pad, body .app .sequancer .perc-track .perc .snare-pad, body .app .sequancer .perc-track .perc .hihat-pad, body .app .sequancer .perc-track .perc .perc-pad, body .app .sequancer .perc-track .perc .tom-pad, body .app .sequancer .perc-track .tom .kick-pad, body .app .sequancer .perc-track .tom .snare-pad, body .app .sequancer .perc-track .tom .hihat-pad, body .app .sequancer .perc-track .tom .perc-pad, body .app .sequancer .perc-track .tom .tom-pad, body .app .sequancer .tom-track .kick .kick-pad, body .app .sequancer .tom-track .kick .snare-pad, body .app .sequancer .tom-track .kick .hihat-pad, body .app .sequancer .tom-track .kick .perc-pad, body .app .sequancer .tom-track .kick .tom-pad, body .app .sequancer .tom-track .snare .kick-pad, body .app .sequancer .tom-track .snare .snare-pad, body .app .sequancer .tom-track .snare .hihat-pad, body .app .sequancer .tom-track .snare .perc-pad, body .app .sequancer .tom-track .snare .tom-pad, body .app .sequancer .tom-track .hihat .kick-pad, body .app .sequancer .tom-track .hihat .snare-pad, body .app .sequancer .tom-track .hihat .hihat-pad, body .app .sequancer .tom-track .hihat .perc-pad, body .app .sequancer .tom-track .hihat .tom-pad, body .app .sequancer .tom-track .perc .kick-pad, body .app .sequancer .tom-track .perc .snare-pad, body .app .sequancer .tom-track .perc .hihat-pad, body .app .sequancer .tom-track .perc .perc-pad, body .app .sequancer .tom-track .perc .tom-pad, body .app .sequancer .tom-track .tom .kick-pad, body .app .sequancer .tom-track .tom .snare-pad, body .app .sequancer .tom-track .tom .hihat-pad, body .app .sequancer .tom-track .tom .perc-pad, body .app .sequancer .tom-track .tom .tom-pad {
+  width: 5rem;
+  height: 5rem;
+  margin: 1rem .5rem;
+  cursor: pointer;
+}
+
+body .app .sequancer .kick-track .kick-pad, body .app .sequancer .snare-track .kick-pad, body .app .sequancer .hihat-track .kick-pad, body .app .sequancer .perc-track .kick-pad, body .app .sequancer .tom-track .kick-pad {
+  background-color: #1f2229;
+}
+
+body .app .sequancer .kick-track .kick-pad.active, body .app .sequancer .snare-track .kick-pad.active, body .app .sequancer .hihat-track .kick-pad.active, body .app .sequancer .perc-track .kick-pad.active, body .app .sequancer .tom-track .kick-pad.active {
+  background-color: #2a2a53ee;
+}
+
+body .app .sequancer .kick-track .snare-pad, body .app .sequancer .snare-track .snare-pad, body .app .sequancer .hihat-track .snare-pad, body .app .sequancer .perc-track .snare-pad, body .app .sequancer .tom-track .snare-pad {
+  background-color: #1f2229;
+}
+
+body .app .sequancer .kick-track .snare-pad.active, body .app .sequancer .snare-track .snare-pad.active, body .app .sequancer .hihat-track .snare-pad.active, body .app .sequancer .perc-track .snare-pad.active, body .app .sequancer .tom-track .snare-pad.active {
+  background-color: #202060ee;
+}
+
+body .app .sequancer .kick-track .hihat-pad, body .app .sequancer .snare-track .hihat-pad, body .app .sequancer .hihat-track .hihat-pad, body .app .sequancer .perc-track .hihat-pad, body .app .sequancer .tom-track .hihat-pad {
+  background-color: #1f2229;
+}
+
+body .app .sequancer .kick-track .hihat-pad.active, body .app .sequancer .snare-track .hihat-pad.active, body .app .sequancer .hihat-track .hihat-pad.active, body .app .sequancer .perc-track .hihat-pad.active, body .app .sequancer .tom-track .hihat-pad.active {
+  background-color: #602080ee;
+}
+
+body .app .sequancer .kick-track .perc-pad, body .app .sequancer .snare-track .perc-pad, body .app .sequancer .hihat-track .perc-pad, body .app .sequancer .perc-track .perc-pad, body .app .sequancer .tom-track .perc-pad {
+  background-color: #1f2229;
+}
+
+body .app .sequancer .kick-track .perc-pad.active, body .app .sequancer .snare-track .perc-pad.active, body .app .sequancer .hihat-track .perc-pad.active, body .app .sequancer .perc-track .perc-pad.active, body .app .sequancer .tom-track .perc-pad.active {
+  background-color: #B030B0ee;
+}
+
+body .app .sequancer .kick-track .tom-pad, body .app .sequancer .snare-track .tom-pad, body .app .sequancer .hihat-track .tom-pad, body .app .sequancer .perc-track .tom-pad, body .app .sequancer .tom-track .tom-pad {
+  background-color: #1f2229;
+}
+
+body .app .sequancer .kick-track .tom-pad.active, body .app .sequancer .snare-track .tom-pad.active, body .app .sequancer .hihat-track .tom-pad.active, body .app .sequancer .perc-track .tom-pad.active, body .app .sequancer .tom-track .tom-pad.active {
+  background-color: #d051d0ee;
+}
+
+body .app .sequancer .kick-track .pad, body .app .sequancer .snare-track .pad, body .app .sequancer .hihat-track .pad, body .app .sequancer .perc-track .pad, body .app .sequancer .tom-track .pad {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.7);
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.7);
+}
+
+body .app .sequancer .play {
+  border: none;
+  background-color: #669e5b;
+  padding: 1rem 4rem;
+  font-size: 1.5rem;
+  margin-top: 3rem;
+  color: black;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.7);
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.7);
+  font-weight: bold;
+  text-transform: 0px 5px 10px rgba(0, 0, 0, 0.7);
+  letter-spacing: 2px;
+}
+
+body .app .sequancer .tempo {
+  margin: 3rem;
+  width: 30%;
+}
+
+body .app .sequancer .tempo .tempo-slider {
+  padding: .2rem;
+  -webkit-appearance: none;
+  margin: 1rem 0rem;
+  width: 100%;
+  position: relative;
+  background-color: #669e5b;
+  cursor: pointer;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.7);
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.7);
+}
+
+body .app .sequancer .tempo p {
+  font-size: 1.5rem;
+  margin: .5rem;
+  text-align: center;
+  text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+body .mobile-warning {
+  height: 100vw;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: seagreen;
+  z-index: 99;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  visibility: hidden;
+}
+
+body .mobile-warning .h2 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+@-webkit-keyframes playTrack {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+
+@keyframes playTrack {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+
+@media only screen and (max-width: 1600px) {
+  .app {
+    height: auto;
+  }
+  .app .sequancer .kick-track, .app .sequancer .snare-track, .app .sequancer .hihat-track, .app .sequancer .perc-track, .app .sequancer .tom-track {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100vw;
+    padding: 0px;
+  }
+  .app .sequancer .kick-track .controls, .app .sequancer .snare-track .controls, .app .sequancer .hihat-track .controls, .app .sequancer .perc-track .controls, .app .sequancer .tom-track .controls {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .app .sequancer .kick-track .kick, .app .sequancer .kick-track .snare, .app .sequancer .kick-track .hihat, .app .sequancer .kick-track .perc, .app .sequancer .kick-track .tom, .app .sequancer .snare-track .kick, .app .sequancer .snare-track .snare, .app .sequancer .snare-track .hihat, .app .sequancer .snare-track .perc, .app .sequancer .snare-track .tom, .app .sequancer .hihat-track .kick, .app .sequancer .hihat-track .snare, .app .sequancer .hihat-track .hihat, .app .sequancer .hihat-track .perc, .app .sequancer .hihat-track .tom, .app .sequancer .perc-track .kick, .app .sequancer .perc-track .snare, .app .sequancer .perc-track .hihat, .app .sequancer .perc-track .perc, .app .sequancer .perc-track .tom, .app .sequancer .tom-track .kick, .app .sequancer .tom-track .snare, .app .sequancer .tom-track .hihat, .app .sequancer .tom-track .perc, .app .sequancer .tom-track .tom {
+    display: block;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  body .app {
+    display: none;
+  }
+  body .mobile-warning {
+    visibility: visible;
+    height: 100vh;
+  }
+}
+/*# sourceMappingURL=main.css.map */
